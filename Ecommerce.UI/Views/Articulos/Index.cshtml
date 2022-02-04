@@ -1,0 +1,60 @@
+﻿@model List<Ecommerce.UI.Models.ArticuloView>
+
+@{ ViewBag.Title = "Lista de Artículos"; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+    <div class="mx-auto" style="width: 50%">
+        <a href="@Url.Action("Agregar","Articulos")" style="text-decoration: none; color: inherit;">
+            <div class="shadow-sm mx-auto mb-3 zoom">
+                <p class="text-center py-2 m-0">Agregar Artículo</p>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mx-auto" style="width: 70% !important">
+        @foreach (var articulo in Model)
+        {
+            <div class="col">
+                <div class="card border-1 shadow-sm zoom">
+
+                    <div class="my-2">
+                        <a href="@Url.Action("Modificar","Articulos")?ID=@articulo.ID" class="btn shadow-sm border-1 shadow-sm mx-2 zoom" style="border-radius: 15px !important;">
+                            <img src="/Img/edit.png" style="width: 25px;" />
+                        </a>
+                        <a href="@Url.Action("Eliminar","Articulos")?ID=@articulo.ID" class="btn shadow-sm border-1 shadow-sm zoom" style="border-radius: 15px !important;">
+                            <img src="/Img/delete.png" style="width: 25px;" />
+                        </a>
+                    </div>
+
+                    <a href="#" style="text-decoration: none; color: inherit;">
+                        <div class="card bg-transparent border-0">
+                            <img class="card-img-top w-50 mx-auto" src="@articulo.UrlImagen">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">@articulo.Nombre</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between w-100 position-relative top-40-percent">
+                            <div>
+                                <small class="text-muted">Precio: $@decimal.Round(articulo.Precio)</small>
+                            </div>
+                            <a href="@Url.Action("Index","Carrito")?ID=@articulo.ID" class="btn btn-outline-dark">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</body>
+</html>

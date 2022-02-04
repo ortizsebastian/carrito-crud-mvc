@@ -1,0 +1,61 @@
+﻿@model Ecommerce.UI.Models.ArticuloView
+
+@{
+    ViewBag.Title = "Modificar Artículos";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+    <div class="card w-25 mx-auto shadow-sm border-1" style="border-radius: 15px !important;">
+        <div class="card-body">
+            <div class="mt-4">
+
+               @using (Html.BeginForm("Modificar", "Articulos", FormMethod.Post))
+                {
+                <div class="col mx-5">
+                    <div class="mb-3">
+                        <label>ID</label>
+                        @Html.TextBoxFor(a => a.ID, new { @readonly = "readonly", @class = "form-control" })
+                    </div>
+                    <div class="mb-3">
+                        <label>Nombre</label>
+                        @Html.TextBoxFor(a => a.Nombre, new { @class = "form-control" })
+                    </div>
+                    <div class="mb-3">
+                        <label>Código</label>
+                        @Html.TextBoxFor(a => a.Codigo, new { @class = "form-control" })
+                    </div>
+                    <div class="mb-3">
+                        <label>Descripción</label>
+                        @Html.TextBoxFor(a => a.Descripcion, new { @class = "form-control" })
+                    </div>
+                    <div class="mb-3">
+                        <label>Precio</label>
+                        @Html.TextBoxFor(a => a.Precio, new { @class = "form-control" })
+                    </div>
+                    <div class="mb-3">
+                        <label>Imagén</label>
+                        @Html.TextBoxFor(a => a.UrlImagen, new { @class = "form-control" })
+                    </div>
+                    <div class="mb-3">
+                        <label>Stock</label>
+                        @Html.TextBoxFor(a => a.Stock, new { @class = "form-control" })
+                    </div>
+
+                    <input class="btn btn-outline-info" value="Agregar" type="submit">
+                    <button class="btn btn-outline-info" type="reset">Limpiar</button>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

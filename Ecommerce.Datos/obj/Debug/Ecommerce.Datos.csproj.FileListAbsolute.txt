@@ -1,0 +1,15 @@
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\Ecommerce.Datos.dll.config
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\Ecommerce.Datos.dll
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\Ecommerce.Datos.pdb
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\Ecommerce.Entidades.dll
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\EntityFramework.dll
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\Ecommerce.Entidades.pdb
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\Ecommerce.Entidades.dll.config
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\EntityFramework.xml
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\obj\Debug\Ecommerce.Datos.csproj.AssemblyReference.cache
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\obj\Debug\Ecommerce.Datos.csproj.CoreCompileInputs.cache
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\obj\Debug\Ecommerce.Datos.csproj.CopyComplete
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\obj\Debug\Ecommerce.Datos.dll
+C:\Users\ortiz\Desktop\Ecommerce\Ecommerce.Datos\obj\Debug\Ecommerce.Datos.pdb

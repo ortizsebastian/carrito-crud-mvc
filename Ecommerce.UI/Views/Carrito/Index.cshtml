@@ -1,0 +1,51 @@
+﻿@model List<Ecommerce.UI.Models.ArticuloView>
+
+@{ ViewBag.Title = "Carrito"; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @{ List<Ecommerce.UI.Models.ArticuloView> list = new List<Ecommerce.UI.Models.ArticuloView>();
+            list = (List<Ecommerce.UI.Models.ArticuloView>)Session["Carrito"]; }
+        
+        @if (list != null && list.Count != 0)
+        {
+            <div class="row row-cols-1 row-cols-md-3 g-4 mx-auto" style="width: 80% !important">
+               @foreach (var articulo in Model)
+                {
+                    <div class="col">
+                        <div class="card border-1 shadow-sm" style="border-radius: 15px;">
+                            <a href="#" style="text-decoration: none; color: inherit;">
+                                <div class="card bg-transparent border-0">
+                                    <img class="card-img-top w-50 mx-auto" src="@articulo.UrlImagen">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">@articulo.Nombre</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between w-100 position-relative top-40-percent">
+                                    <div>
+                                        <small class="text-muted">Precio: $@decimal.Round(articulo.Precio)</small>
+                                    </div>
+                                    <a href="@Url.Action("Eliminar", "Carrito", new { id = articulo.ID })" class="btn btn-outline-danger">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                }           
+            </div>
+        }
+        else
+        {
+            Response.Redirect(Url.Action("Index", "Articulos"));
+        }
+    </div>
+</body>
+</html>
